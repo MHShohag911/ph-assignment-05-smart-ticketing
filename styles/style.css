@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number]{
+    -moz-appearance: textfield;
+}
+
+.font-raleway{
+  font-family: "Raleway", sans-serif;
+}
+
+.btn-primary {
+    background-color: #1DD100;
+    border: 2px solid #1DD100;
+    color: black;
+}
+
+.btn-secondary{
+    background-color: white;
+    color: #1DD100;
+    border: 2px solid #1DD100;
+}
+
+.btn-primary:hover{
+    background-color: white;
+    color: #1DD100;
+    border: 2px solid #1DD100;
+}
+
+.btn-secondary:hover{
+    background-color: #1DD100;
+    border: 2px solid #1DD100;
+    color: black;
+}
+
+.btn-tertiary{
+    background-color: #030712;
+}
+
+.text-color-primary{
+    color: #1DD100;
+}
+.text-color-primary40{
+    color: #1DD10066;
+}
+.text-color-primary10{
+    color: #1DD0011A;
+}
+
+.bg-color-primary{
+    background-color: #1DD100;
+}
+
+.bg-color-primary40{
+    background-color: #1DD10066;
+}
+.bg-color-primary10{
+   background-color: #1DD1001A;
+}
+
+.btn-places{
+    background-color: #0307120D;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.border-bottom-style{
+    border-bottom: 1px dashed #03071233;
+    padding-bottom: 15px;
+}
+
+.selected-seat{
+    background-color: #1DD100;
+    border-radius: 12px;
+    color: white;
+}

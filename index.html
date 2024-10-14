@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Ticketing</title>
+    <!-- Tailwind and DaisyUi Link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body id="modal">
+    <!-- Header Section -->
+    <header class="max-w-screen-2xl mx-auto">
+      <div class="navbar lg:container bg-base-100 font-raleway">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            >
+              <li><a>Home</a></li>
+              <li><a>About</a></li>
+              <li><a>Destination</a></li>
+              <li><a>Search</a></li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost text-4xl font-extrabold">P-Ticket</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Destination</a></li>
+            <li><a>Search</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <a
+            class="btn text-color-primary bg-color-primary10 border-[--bg-color-primary]"
+            >Bus <img src="/images/bus-icon.png" alt=""
+          /></a>
+        </div>
+      </div>
+    </header>
+    <!-- Main Section -->
+    <main class="lg:container p-5 mx-auto">
+      <!-- Banner Section -->
+      <section>
+        <!-- Main Banner Section -->
+        <div
+          class="hero lg:min-h-screen rounded-3xl"
+          style="background-image: url(images/banner.png)"
+        >
+          <div class="hero-overlay bg-opacity-0"></div>
+          <div class="hero-content text-neutral-content text-center">
+            <div class="max-w-2xl">
+              <h1
+                class="mb-5 text-white text-3xl lg:text-6xl md:text-4xl font-bold"
+              >
+                End-to-End Travel with <br />
+                <span class="text-color-primary">P Paribahan</span>
+              </h1>
+              <p class="mb-5 text-xl">
+                Yes, you can run unit tests and view the results directly within
+                the app. The integrated testing features allow for a streamlined
+                .
+              </p>
+              <button class="btn btn-primary btn-primary text-xl font-bold">
+                <a href="#section-paribahan">Buy Tickets</a>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Mini Card Section -->
+        <div class="mini-card lg:block hidden max-w-6xl mx-auto">
+          <div class="flex justify-center -mt-12 gap-5">
+            <div
+              class="stat flex flex-row justify-center bg-white rounded-2xl max-w-[308px] max-h-[138px] border-b-4 border-[#1DD100]"
+            >
+              <div class="stat-figure text-primary">
+                <img src="/images/people.png" alt="" />
+              </div>
+              <div class="">
+                <div class="stat-value font-bold">500K+</div>
+                <div class="stat-desc">Registered Users</div>
+              </div>
+            </div>
+            <div
+              class="stat flex flex-row justify-center bg-white rounded-2xl max-w-[308px] max-h-[138px] border-b-4 border-[#1DD100]"
+            >
+              <div class="stat-figure text-primary">
+                <img src="/images/ticket-cupon.png" alt="" />
+              </div>
+              <div>
+                <div class="stat-value font-bold">1.7 lacks</div>
+                <div class="stat-desc">Tickets Sold</div>
+              </div>
+            </div>
+            <div
+              class="stat flex flex-row justify-center bg-white rounded-2xl max-w-[308px] max-h-[138px] border-b-4 border-[#1DD100]"
+            >
+              <div class="stat-figure text-primary">
+                <img src="/images/stoppage.png" alt="" />
+              </div>
+              <div>
+                <div class="stat-value font-bold">80K+</div>
+                <div class="stat-desc">Rental Partners</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Offers Section -->
+      <section class="mt-20">
+        <h1 class="text-black text-center text-4xl font-bold">
+          Best offers for you
+        </h1>
+        <div class="grid lg:grid-cols-2 grid-cols-1 mt-20 gap-5">
+          <div>
+            <div
+              class="min-h-[220px] bg-no-repeat bg-center flex items-center justify-center mx-auto"
+              style="background-image: url(images/Group115.png)"
+            >
+              <div class="ml-10">
+                <h3 class="text-2xl lg:text-4xl font-bold">15% OFF</h3>
+                <p class="text-xl font-bold">on you next purchase</p>
+                <p class="text-[18px]">use by January 2024</p>
+              </div>
+              <div class="ml-24">
+                <h3 class="text-xl lg:text-3xl font-bold">NEW15</h3>
+                <p class="text-xl">Coupon Code</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="min-h-[220px] bg-no-repeat bg-center flex items-center justify-center mx-auto"
+              style="background-image: url(images/Group116.png)"
+            >
+              <div class="ml-10">
+                <h3 class="text-2xl lg:text-4xl font-bold">20% OFF</h3>
+                <p class="text-xl font-bold">on you next purchase</p>
+                <p class="text-[18px]">use by January 2024</p>
+              </div>
+              <div class="ml-24">
+                <h3 class="text-xl lg:text-3xl font-bold">Couple 20</h3>
+                <p class="text-xl">Coupon Code</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <button class="btn btn-secondary mt-5">See All Offers</button>
+        </div>
+      </section>
+      <!-- Paribahan Section -->
+
+      <section
+        id="section-paribahan"
+        class="mt-20 bg-[#F7F8F8] rounded-t-[70px] border-t-4 border-[#1DD100] pb-20"
+      >
+        <!-- Paribahan Heading -->
+        <div class="my-20">
+          <h1 class="text-black text-center text-4xl font-bold mb-2">
+            P.H Paribahan
+          </h1>
+          <p class="text-center w-full lg:w-1/2 mx-auto">
+            Yes, you can run unit tests and view the results directly within the
+            app. The integrated testing features allow for a streamlined
+          </p>
+        </div>
+
+        <!-- Paribahan Ticket -->
+        <div class="max-w-7xl mx-auto">
+          <div
+            class="md:flex rounded-3xl bg-[#FFFFFF] mx-auto justify-center"
+          >
+            <div class="py-8 w-full">
+              <div class="sm:flex justify-between mb-5">
+                <div class="flex items-center mr-2 lg:mr-12">
+                  <img
+                    class="w-[60px] h-[45px] ml-5"
+                    src="images/bus-logo.png"
+                    alt=""
+                  />
+                  <div class="space-y-1 ml-1 mb-5 sm:mb-0">
+                    <h3 class="text-xl lg:3xl font-bold">
+                      Greenline Paribahan
+                    </h3>
+                    <p class="">Coach-009-WEB ! AC Business</p>
+                  </div>
+                </div>
+                <div
+                  class="bg-color-primary10 flex px-8 justify-center items-center rounded-xl text-color-primary font-bold"
+                >
+                  <img class="mr-2" src="images/seat-green.png" alt="" />
+                  <p><span id="max-seat">40</span> Seats left</p>
+                </div>
+              </div>
+              <div
+                class="rounded-3xl bg-[#F7F8F8] p-2 md:p-10 space-y-5 text-xs md:text-lg"
+              >
+                <div class="flex justify-between border-bottom-style">
+                  <p>Route</p>
+                  <p class="font-bold">Dhaka-Sylhet</p>
+                </div>
+                <div class="flex justify-between border-bottom-style">
+                  <p>Departure Time</p>
+                  <p class="font-bold">9:00 PM</p>
+                </div>
+                <div class="flex justify-between gap-5">
+                  <p class="btn-places">Boarding Point - Laxmipur</p>
+                  <p class="btn-places">Dropping Point - Bogrura</p>
+                  <p class="btn-places">Est. Time - 11 Hour</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex justfy-center items-center w-1/2 mx-auto">
+              <div class="flex mx-auto">
+                <img
+                  class="hidden lg:block mx-auto"
+                  src="images/info-devider.png"
+                  alt=""
+                />
+                <div class="flex flex-col justify-center items-center w-full">
+                  <img class="mx-auto" src="images/fare.png" alt="" />
+                  <p class="text-3xl font-bold">550 Taka</p>
+                  <p class="text-xl text-gray-500">Per Seat</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Seat Layout -->
+        <div
+          class="grid md:grid-cols-2 grid-cols-1 bg-[#fff] mt-20 lg:p-8 max-w-7xl mx-auto rounded-3xl py-5"
+        >
+          <div class="md:p-5">
+            <h3 class="text-3xl text-center font-semibold border-bottom-style mb-5">
+              Select Your Seat
+            </h3>
+            <div class="flex justify-between border-bottom-style mb-5">
+              <div class="flex text-[#03071280]">
+                <img class="mr-2" src="images/seat-gray.png" alt="" /><span
+                  >Available</span
+                >
+              </div>
+              <div class="flex text-color-primary">
+                <img
+                  class="mr-2 w-[28px] h-[28px]"
+                  src="images/seat-green-filled.png"
+                  alt=""
+                /><span>Selected</span>
+              </div>
+            </div>
+            <div id="seat-layout" class="">
+              <div class="grid grid-cols-5 gap-3 text-center">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span class="btn-places"
+                  ><img class="mx-auto" src="images/wheel.png" alt=""
+                /></span>
+              </div>
+              <div class="my-3">
+                <div class="grid grid-cols-5 gap-3 text-center">
+                  <span id="A" class="p-[10px]">A</span>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="A1"
+                    class="btn-places"
+                  >
+                    A1
+                  </button>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="A2"
+                    class="btn-places"
+                  >
+                    A2
+                  </button>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="A3"
+                    class="btn-places"
+                  >
+                    A3
+                  </button>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="A4"
+                    class="btn-places"
+                  >
+                    A4
+                  </button>
+                </div>
+              </div>
+              <div class="my-3">
+                <div class="grid grid-cols-5 gap-3 text-center">
+                  <span id="B" class="p-[10px]">B</span>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="B1"
+                    class="btn-places"
+                  >
+                    B1
+                  </button>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="B2"
+                    class="btn-places"
+                  >
+                    B2
+                  </button>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="B3"
+                    class="btn-places"
+                  >
+                    B3
+                  </button>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="B4"
+                    class="btn-places"
+                  >
+                    B4
+                  </button>
+                </div>
+              </div>
+              <div class="my-3">
+                <div class="grid grid-cols-5 gap-3 text-center">
+                  <span id="C" class="p-[10px]">C</span>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="C1"
+                    class="btn-places"
+                  >
+                    C1
+                  </button>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="C2"
+                    class="btn-places"
+                  >
+                    C2
+                  </button>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="C3"
+                    class="btn-places"
+                  >
+                    C3
+                  </button>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="C4"
+                    class="btn-places"
+                  >
+                    C4
+                  </button>
+                </div>
+              </div>
+              <div class="my-3">
+                <div class="grid grid-cols-5 gap-3 text-center">
+                  <span id="D" class="p-[10px]">D</span>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="D1"
+                    class="btn-places"
+                  >
+                    D1
+                  </button>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="D2"
+                    class="btn-places"
+                  >
+                    D2
+                  </button>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="D3"
+                    class="btn-places"
+                  >
+                    D3
+                  </button>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="D4"
+                    class="btn-places"
+                  >
+                    D4
+                  </button>
+                </div>
+              </div>
+              <div class="my-3">
+                <div class="grid grid-cols-5 gap-3 text-center">
+                  <span id="E" class="p-[10px]">E</span>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="E1"
+                    class="btn-places"
+                  >
+                    E1
+                  </button>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="E2"
+                    class="btn-places"
+                  >
+                    E2
+                  </button>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="E3"
+                    class="btn-places"
+                  >
+                    E3
+                  </button>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="E4"
+                    class="btn-places"
+                  >
+                    E4
+                  </button>
+                </div>
+              </div>
+              <div class="my-3">
+                <div class="grid grid-cols-5 gap-3 text-center">
+                  <span id="F" class="p-[10px]">F</span>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="F1"
+                    class="btn-places"
+                  >
+                    F1
+                  </button>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="F2"
+                    class="btn-places"
+                  >
+                    F2
+                  </button>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="F3"
+                    class="btn-places"
+                  >
+                    F3
+                  </button>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="F4"
+                    class="btn-places"
+                  >
+                    F4
+                  </button>
+                </div>
+              </div>
+              <div class="my-3">
+                <div class="grid grid-cols-5 gap-3 text-center">
+                  <span id="G" class="p-[10px]">G</span>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="G1"
+                    class="btn-places"
+                  >
+                    G1
+                  </button>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="G2"
+                    class="btn-places"
+                  >
+                    G2
+                  </button>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="G3"
+                    class="btn-places"
+                  >
+                    G3
+                  </button>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="G4"
+                    class="btn-places"
+                  >
+                    G4
+                  </button>
+                </div>
+              </div>
+              <div class="my-3">
+                <div class="grid grid-cols-5 gap-3 text-center">
+                  <span id="H" class="p-[10px]">H</span>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="H1"
+                    class="btn-places"
+                  >
+                    H1
+                  </button>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="H2"
+                    class="btn-places"
+                  >
+                    H2
+                  </button>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="H3"
+                    class="btn-places"
+                  >
+                    H3
+                  </button>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="H4"
+                    class="btn-places"
+                  >
+                    H4
+                  </button>
+                </div>
+              </div>
+              <div class="my-3">
+                <div class="grid grid-cols-5 gap-3 text-center">
+                  <span id="I" class="p-[10px]">I</span>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="I1"
+                    class="btn-places"
+                  >
+                    I1
+                  </button>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="I2"
+                    class="btn-places"
+                  >
+                    I2
+                  </button>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="I3"
+                    class="btn-places"
+                  >
+                    I3
+                  </button>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="I4"
+                    class="btn-places"
+                  >
+                    I4
+                  </button>
+                </div>
+              </div>
+              <div class="my-3">
+                <div class="grid grid-cols-5 gap-3 text-center">
+                  <span id="J" class="p-[10px]">J</span>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="J1"
+                    class="btn-places"
+                  >
+                    J1
+                  </button>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="J2"
+                    class="btn-places"
+                  >
+                    J2
+                  </button>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="J3"
+                    class="btn-places"
+                  >
+                    J3
+                  </button>
+                  <button
+                    onclick="selectSeat(this.id)"
+                    id="J4"
+                    class="btn-places"
+                  >
+                    J4
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="border-dashed mt-10 md:mt-0 md:border-l-2 border-gray md:p-5">
+            <h3 class="text-3xl text-center font-semibold">Select Your Seat</h3>
+            <div class="bg-[#F7F8F8] p-5 rounded-xl mt-5">
+              <div>
+                <div id="seat-info-row">
+                  <div
+                    class="grid grid-cols-3 font-semibold border-bottom-style"
+                  >
+                    <h3>
+                      Seat
+                      <span
+                        id="no-of-seat-selected"
+                        class="bg-color-primary px-3 text-white rounded-lg"
+                        >0</span
+                      >
+                    </h3>
+                    <h3 class="text-center">Class</h3>
+                    <h3 class="text-right">Price</h3>
+                  </div>
+                </div>
+                <hr class="mt-2" />
+              </div>
+              <div class="flex justify-between">
+                <h3 class="font-semibold">Total Price</h3>
+                <p class="font-semibold">
+                  BDT <span id="total-price-without-discount">0</span>
+                </p>
+              </div>
+              <div class="mt-5">
+                <label
+                  class="input flex justify-between items-center gap-2 border-none hover:border-none max-w-96 mx-auto"
+                >
+                  <input
+                    id="coupon-input"
+                    type="text"
+                    class=""
+                    placeholder="Have any coupon?"
+                  />
+                  <button
+                    id="button-coupon"
+                    onclick="getInputValue()"
+                    class="btn btn-primary rounded-xl px-5 text-white font-semibold disabled:text-[#1DD100] disabled:bg-white mr-0"
+                    disabled
+                  >
+                    Apply
+                  </button>
+                </label>
+              </div>
+              <div class="flex justify-between mt-5">
+                <h3 class="font-semibold">Grand Total</h3>
+                <p id="grand-total" class="font-semibold">BDT <span>0</span></p>
+              </div>
+            </div>
+            <!-- Form Section -->
+            <div class="">
+              <div class="card bg-base-100 w-full max-w-sm shrink-0 mx-auto">
+                <form class="card-body p-2">
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text font-bold text-base"
+                        >Passenger Name<sup>*</sup></span
+                      >
+                    </label>
+                    <input
+                      id="name"
+                      type="name"
+                      placeholder="Enter your name"
+                      class="input input-bordered"
+                      required
+                    />
+                  </div>
+                  <div class="form-control">
+                    <label class="label font-bold text-base">
+                      <span class="label-text">Phone Number<sup>*</sup></span>
+                    </label>
+                    <input
+                      id="number"
+                      type="number"
+                      placeholder="Enter your phone number"
+                      class="input input-bordered"
+                      required
+                    />
+                  </div>
+                  <div class="form-control">
+                    <label class="label font-bold text-base">
+                      <span class="label-text">Email ID</span>
+                    </label>
+                  </div>
+                  <input
+                    id="email"
+                    type="email"
+                    placeholder="Enter your email id"
+                    class="input input-bordered"
+                    required
+                  />
+                  <div class="form-control mt-6">
+                    <button
+                      onclick="my_modal_1.showModal()"
+                      id="btn-next"
+                      class="btn btn-primary text-white font-bold disabled:text-[#1DD100] disabled:bg-white"
+                    >
+                      Next
+                    </button>
+                  </div>
+                </form>
+                <div class="flex justify-between px-5">
+                  <label class="label">
+                    <a
+                      href="#"
+                      class="label-text-alt underline text-gray-500 text-base"
+                      >Terms and Conditions</a
+                    >
+                  </label>
+                  <label class="label">
+                    <a
+                      href="#"
+                      class="label-text-alt underline text-gray-500 text-base"
+                      >Cancellation Policy</a
+                    >
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Modals Start-->
+      <dialog id="my_modal_1" class="modal">
+        <div class="modal-box">
+          <img class="mx-auto" src="images/success.png" alt="" />
+          <h3
+            class="text-2xl uppercase text-[#27AE60] text-center font-semibold"
+          >
+            success
+          </h3>
+          <p class="py-4 text-xl text-center">
+            Thank you for Booking Our Bus Seats.<br />
+            We are working hard to find the best service and deals for you.
+          </p>
+          <p class="text-gray-500 text-xl text-center">
+            Shortly you will find a confirmation in your mail.
+          </p>
+          <div class="modal-action">
+            <form class="flex justify-center w-full" method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn mx-auto bg-[#27AE60] rounded-full text-white">
+                Continue
+              </button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+
+      <dialog id="my_modal_2" class="modal">
+        <div class="modal-box">
+          <h3 class="text-lg font-bold">Max Limit Reached!!!</h3>
+          <p class="py-4">You Can't Buy More Than 4 Tickets.</p>
+        </div>
+        <form method="dialog" class="modal-backdrop">
+          <button>close</button>
+        </form>
+      </dialog>
+      <!-- Modals End -->
+    </main>
+    <footer class="bg-[#030712] pt-10">
+      <div class="container mx-auto text-neutral-content p-4">
+        <div
+          class="sm:flex justify-between border-bottom-style border-white w-full pb-10"
+        >
+          <div class="my-4">
+            <a href="#" class="text-4xl font-bold text-white ">P-Ticket</a>
+            <p class="text-l">
+              P-Ticket is a digital platform to make your <br />
+              daily commuting better.
+            </p>
+          </div>
+          <div>
+            <h1 class="font-bold mb-2">Download our app</h1>
+            <a href="#">
+              <div
+                class="flex items-center justify-center border px-5 py-1 rounded-lg text-right"
+              >
+                <img
+                  class="w-[32px] h-[36px] mr-2"
+                  src="images/playstore.png"
+                  alt=""
+                />
+                <div class="-space-y-1">
+                  <p class="text-left text-xs">Get it on</p>
+                  <p class="text-white text-lg font-semibold">Google Play</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="sm:flex-reverse justify-between mt-5 space-y-4">
+          <div class="">
+            <a class="mr-5" href="#">Terms & Condition</a>
+            <a class="mr-5" href="#">Return & refund policy</a>
+            <a href="#">Privacy policy</a>
+          </div>
+          <div>
+            <p class="text-gray-500">
+              &copy;all rights reserved. P-Ticket services limited. 2024
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="scripts/utitlity.js"></script>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
